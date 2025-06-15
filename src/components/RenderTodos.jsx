@@ -11,7 +11,7 @@ const RenderTodos = ({ todos, setTodos, setInput, inputRef }) => {
   };
 
   const handleDelete = (todo) => {
-    setTodos((prevTodos) => prevTodos.filter((t) => t.id === todo.id));
+    setTodos((prevTodos) => prevTodos.filter((t) => t.id !== todo.id));
   };
 
   const handleUpdate = (todo) => {
@@ -56,7 +56,7 @@ const RenderTodos = ({ todos, setTodos, setInput, inputRef }) => {
               </div>
             </div>
           ))
-        : "No todos available"}
+        : ""}
     </div>
   );
 };
